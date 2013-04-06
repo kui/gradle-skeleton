@@ -1,0 +1,13 @@
+apply plugin: 'eclipse-wtp'
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+eclipse {
+	wtp {
+		facet wtpFacets
+	}
+}
+dependencies {
+	provided 'javax.servlet:servlet-api:2.5'
+	compile project(':mylib')
+}
